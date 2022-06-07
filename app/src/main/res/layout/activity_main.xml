@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/AirLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Air Characteristics"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.067" />
+
+    <TextView
+        android:id="@+id/CCLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Climate Control"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/HumidityLabelView"
+        app:layout_constraintTop_toBottomOf="@+id/HumidityLabelView"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <TextView
+        android:id="@+id/DoorLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Door Status - OPEN[OFF]/CLOSED[ON]"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/HumidityLabelView"
+        app:layout_constraintTop_toBottomOf="@+id/ClimatContolValueLabelView"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <TextView
+        android:id="@+id/ValveLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valve Status - OPEN[OFF]/CLOSED[ON]"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/HumidityLabelView"
+        app:layout_constraintTop_toBottomOf="@+id/DoorLabelView"
+        app:layout_constraintVertical_bias="0.09" />
+
+    <TextView
+        android:id="@+id/GroundLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ground Humidity"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/HumidityLabelView"
+        app:layout_constraintTop_toBottomOf="@+id/WaterLabelView"
+        app:layout_constraintVertical_bias="0.132" />
+
+    <TextView
+        android:id="@+id/TemperatureLabelView"
+        android:layout_width="115dp"
+        android:layout_height="25dp"
+        android:text="Temperature: "
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AirLabel"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <TextView
+        android:id="@+id/TemperatureValue"
+        android:layout_width="115dp"
+        android:layout_height="25dp"
+        android:text="."
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/TemperatureLabelView"
+        app:layout_constraintStart_toEndOf="@+id/TemperatureLabelView"
+        app:layout_constraintTop_toTopOf="@+id/TemperatureLabelView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/HumidityValue"
+        android:layout_width="115dp"
+        android:layout_height="25dp"
+        android:text="."
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/HumidityLabelView"
+        app:layout_constraintStart_toEndOf="@+id/HumidityLabelView"
+        app:layout_constraintTop_toBottomOf="@+id/TemperatureLabelView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/HumidityLabelView"
+        android:layout_width="115dp"
+        android:layout_height="25dp"
+        android:text="Humidity: "
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TemperatureLabelView"
+        app:layout_constraintVertical_bias="0.001" />
+
+    <TextView
+        android:id="@+id/ClimatControlLabelView"
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:text="Climat Control Status: "
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CCLabel"
+        app:layout_constraintVertical_bias="0.028" />
+
+    <TextView
+        android:id="@+id/ClimatContolValueLabelView"
+        android:layout_width="115dp"
+        android:layout_height="25dp"
+        android:text="Value:"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ClimatControlLabelView"
+        app:layout_constraintVertical_bias="0.092" />
+
+    <Button
+        android:id="@+id/ClimatControlStatusButton"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:text="C"
+        app:layout_constraintBottom_toBottomOf="@+id/ClimatControlStatus"
+        app:layout_constraintStart_toEndOf="@+id/ClimatControlStatus"
+        app:layout_constraintTop_toTopOf="@+id/ClimatControlStatus"
+        app:layout_constraintVertical_bias="0.434" />
+
+    <LinearLayout
+        android:id="@+id/ClimatContolValueLayout"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/ClimatContolValueLabelView"
+        app:layout_constraintStart_toEndOf="@+id/ClimatContolValueLabelView"
+        app:layout_constraintTop_toTopOf="@+id/ClimatContolValueLabelView"
+        app:layout_constraintVertical_bias="0.88">
+
+        <Button
+            android:id="@+id/btn_less_cc"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="-" />
+
+        <EditText
+            android:id="@+id/et_number_cc"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:text="0"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btn_more_cc"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="+" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ClimatControlStatus"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="4dp"
+        android:text="."
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ClimatControlLabelView"
+        app:layout_constraintStart_toEndOf="@+id/ClimatControlLabelView"
+        app:layout_constraintTop_toBottomOf="@+id/HumidityValue"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/GasStatus"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="4dp"
+        android:text="."
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/GasLabelView"
+        app:layout_constraintStart_toEndOf="@+id/GasLabelView"
+        app:layout_constraintTop_toTopOf="@+id/GasLabelView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/WaterStatus"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="4dp"
+        android:text="."
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/WaterLabelView"
+        app:layout_constraintStart_toEndOf="@+id/WaterLabelView"
+        app:layout_constraintTop_toTopOf="@+id/WaterLabelView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/GasLabelView"
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="24dp"
+        android:text="Gas Status: "
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/ValveLabel"
+        app:layout_constraintTop_toBottomOf="@+id/ValveLabel" />
+
+    <TextView
+        android:id="@+id/WaterLabelView"
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="24dp"
+        android:text="Water Status: "
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/GasLabelView"
+        app:layout_constraintTop_toBottomOf="@+id/GasLabelView" />
+
+    <Button
+        android:id="@+id/WaterStatusButton"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:text="C"
+        app:layout_constraintBottom_toBottomOf="@+id/WaterStatus"
+        app:layout_constraintStart_toEndOf="@+id/WaterStatus"
+        app:layout_constraintTop_toTopOf="@+id/WaterStatus" />
+
+    <Button
+        android:id="@+id/GasStatusButton"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:text="C"
+        app:layout_constraintBottom_toBottomOf="@+id/GasStatus"
+        app:layout_constraintStart_toEndOf="@+id/GasStatus"
+        app:layout_constraintTop_toTopOf="@+id/GasStatus" />
+
+    <TextView
+        android:id="@+id/DoorStatus"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="4dp"
+        android:text="."
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/DoorLabelView"
+        app:layout_constraintStart_toEndOf="@+id/DoorLabelView"
+        app:layout_constraintTop_toTopOf="@+id/DoorLabelView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/DoorLabelView"
+        android:layout_width="180dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="16dp"
+        android:text="Door Status: "
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/DoorLabel"
+        app:layout_constraintTop_toBottomOf="@+id/DoorLabel" />
+
+    <Button
+        android:id="@+id/DoorStatusButton"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:text="C"
+        app:layout_constraintBottom_toBottomOf="@+id/DoorStatus"
+        app:layout_constraintStart_toEndOf="@+id/DoorStatus"
+        app:layout_constraintTop_toTopOf="@+id/DoorStatus"
+        app:layout_constraintVertical_bias="0.521" />
+
+    <TextView
+        android:id="@+id/GroundHumidityValueLabelView"
+        android:layout_width="115dp"
+        android:layout_height="25dp"
+        android:text="Value:"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ClimatContolValueLabelView"
+        app:layout_constraintTop_toBottomOf="@+id/GroundLabel"
+        app:layout_constraintVertical_bias="0.256" />
+
+    <LinearLayout
+        android:id="@+id/GroundHumidityValueLayout"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/GroundHumidityValueLabelView"
+        app:layout_constraintStart_toEndOf="@+id/GroundHumidityValueLabelView"
+        app:layout_constraintTop_toTopOf="@+id/GroundHumidityValueLabelView">
+
+        <Button
+            android:id="@+id/btn_less_gh"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="-" />
+
+        <EditText
+            android:id="@+id/et_number_gh"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:text="0"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btn_more_gh"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="+" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
