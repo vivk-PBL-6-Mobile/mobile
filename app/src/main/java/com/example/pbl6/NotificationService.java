@@ -15,7 +15,7 @@ public class NotificationService extends Service {
     private NotifyComponent notifyComponent;
 
     private final String TAG = "Timers";
-    private final int SCHEDULE_SECONDS = 5;
+    private final int SCHEDULE_SECONDS = 2;
 
     @Override
     public IBinder onBind(Intent arg0) {
