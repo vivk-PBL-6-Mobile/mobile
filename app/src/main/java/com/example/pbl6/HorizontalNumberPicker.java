@@ -14,8 +14,8 @@ public class HorizontalNumberPicker {
     public HorizontalNumberPicker(EditText editTextNumber, Button lessButton, Button moreButton, int min, int max) {
         this.editTextNumber = editTextNumber;
 
-        setMin(0);
-        setMax(50);
+        setMin(min);
+        setMax(max);
 
         editTextNumber.addTextChangedListener(new AddChangedHandler());
 
