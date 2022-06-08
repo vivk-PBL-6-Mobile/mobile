@@ -59,6 +59,9 @@ public class HorizontalNumberPicker {
             }
 
             editTextNumber.setText(String.valueOf(newValue));
+
+            HttpHandler handler =  HttpHandler.GetInstance();
+            handler.SetUpdate(true);
         }
     }
 
