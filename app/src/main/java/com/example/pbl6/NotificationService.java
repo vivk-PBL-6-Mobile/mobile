@@ -71,7 +71,11 @@ public class NotificationService extends Service {
                         // notifyComponent.Notify("Test Header", "TEST");
                         HttpHandler handler = HttpHandler.GetInstance();
                         handler.GetSensors();
-                        handler.SetActuators();
+
+                        if (handler.GetUpdate()) {
+                            handler.SetActuators();
+                            handler.SetUpdate(false);
+                        }
                     }
                 });
             }

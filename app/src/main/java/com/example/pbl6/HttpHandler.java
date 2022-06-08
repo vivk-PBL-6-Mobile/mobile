@@ -42,8 +42,10 @@ public class HttpHandler {
     HorizontalNumberPicker climateControlPicker;
     HorizontalNumberPicker groundHumidityPicker;
 
-    private HttpHandler()  {
+    private boolean update = false;
 
+    private HttpHandler()  {
+        update = false;
     }
 
     public static HttpHandler GetInstance()  {
@@ -180,5 +182,13 @@ public class HttpHandler {
         });
 
         requestQueue.add(request);
+    }
+
+    public boolean GetUpdate() {
+        return update;
+    }
+
+    public void SetUpdate(boolean update) {
+        this.update = update;
     }
 }

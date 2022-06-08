@@ -23,7 +23,7 @@ public class HorizontalStatusText {
             statusText.Invert();
 
             HttpHandler handler =  HttpHandler.GetInstance();
-            handler.SetActuators();
+            handler.SetUpdate(true);
         }
     }
 }

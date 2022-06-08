@@ -33,7 +33,7 @@ public class HorizontalNumberPicker {
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             HttpHandler handler =  HttpHandler.GetInstance();
-            handler.SetActuators();
+            handler.SetUpdate(true);
         }
 
         @Override
